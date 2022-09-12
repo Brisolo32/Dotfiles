@@ -1,0 +1,35 @@
+.app-row {
+    transition: unset;
+    padding: 5px 0 5px 10px;
+    background-color: #282828;
+}
+
+.app-row:selected {
+    background-color: #383838;
+}
+
+.app-label {
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.app-list {
+    background-color: #282828;
+ }
+
+#root-box {
+    border: 3px solid #282828;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    margin: 100px;
+    background-color: #282828;
+}
+
+#search {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    padding: 2px 8px;
+    margin: 5px;
+}
