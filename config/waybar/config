@@ -1,32 +1,28 @@
 {
     "layer": "bottom",
     "position": "top",
-    "height": 10,
+    "height": 8,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["custom/flameshot", "network", "battery", "clock"],
-    "sway/mode": {
-        "format": " {}"
-    },
+    "modules-center": ["clock"],
+    "modules-right": ["custom/flameshot", "battery", "pulseaudio", "network"],
     "sway/window": {
-	"max-length": "80",
-	"tooltip": false,
-	"format": "{}"
+	   "max-length": "80",
+	   "tooltip": false,
+	   "format": "{}"
     },
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
-
     },
     "clock": {
-        "format": "🗓️ {:%d-%m-%Y %R}",
+        "format": "{:%Y-%m-%d %I:%M}",
         "tooltip": false
     },
     "battery": {
         "format": "{icon} {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": ["🪫", "🪫", "🪫", "🔋", "🔋"],
+        "format-icons": ["", "", "", ""],
         "format-charging": "{icon} {capacity}%",
         "interval": 30,
         "states": {
@@ -40,17 +36,24 @@
         "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": ["📶 Weak", "📶 Mid" ,"📶 Strong"],
-            "ethernet": ["🌐 Ethernet"],
-            "disconnected": ["🚫No Connection"]
+            "wifi": [" Weak signal", " Fair signal" ," Strong signal"],
+            "ethernet": [" Ethernet"],
+            "disconnected": [" No Connection"]
         },
         "on-click": "alacritty -e nmcli",
     "tooltip": false
     },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+    "on-click": "pavucontrol"
+    },
     "custom/flameshot": {
         "format": "{icon}",
         "format-icons": {
-            "default": ["🔥"]
+            "default": [""]
         },
         "on-click": "/home/brisolo/startup.sh",
         "tooltip": false

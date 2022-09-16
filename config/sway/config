@@ -220,7 +220,6 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
 
 default_border pixel 2
 
@@ -247,9 +246,10 @@ bar {
     #}
 }
 # Class                 border  backgr. text    indic.  child_border
-client.focused		#181818 #ffffff #ffffff #444444 #181818
+client.focused		    #181818 #ffffff #ffffff #444444 #181818
 client.unfocused        #2C2C2C #ffffff #ffffff #ffffff #2C2C2C
 client.urgent           #9E0202 #ffffff #ffffff #9E0202 #B30000
 for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
+for_window [app_id="pavucontrol"] floating enable, fullscreen disable, move absolute position 450 200,
 
 include /etc/sway/config.d/*
