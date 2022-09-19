@@ -50,8 +50,8 @@ output HDMI-A-1 resolution 1920x1080 position 1366 0
 # Example configuration:
 #
 exec swayidle -w \
+	 timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          timeout 600 'gtklock -b ~/Dotfiles/Wallpapers/mojaveblurred.png' \
-         timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'gtklock -b ~/Dotfiles/Wallpapers/mojaveblurred.png'
 
 # This will lock your screen after 600 seconds (10min) of inactivity, then turn off

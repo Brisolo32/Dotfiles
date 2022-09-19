@@ -16,7 +16,7 @@
         "all-outputs": false,
     },
     "clock": {
-        "format": "{:%Y-%m-%d %I:%M}",
+        "format": "{:%d-%m-%Y %I:%M}",
         "tooltip": false
     },
     "battery": {
