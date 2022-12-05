@@ -1,82 +1,64 @@
+@import './macchiato.css';
+
 * {
     border-color: #ffffff;
     font-family:   "JetBrains Mono", "Font Awesome 6 Free";
     font-size:     13px;
+    font-weight: 700;
+    color: @base;
     box-shadow:    none;
     text-shadow:   none;
     transition-duration: 0s;
 }
 
 window#waybar {
-    color: rgba(255, 255, 255, 1);
-    text-shadow: 1px 1px 1px black;
-    background: rgba(0, 1, 40, 0);
+    background-color: @base;
 }
 
-#workspaces {
-    margin:     5px 0px 0px 5px;
-    border-color: rgba(33, 33, 33, 1);
+#clock, #network, #custom-flameshot, #pulseaudio, #battery, #tray {
+    margin: 5px 5px 5px 5px;
+    /* background-color: @crust; */
     border-style: solid;
-    border-width: 1px;
+    /* border-color: @crust; */
     border-radius: 5px;
-    background: rgba(33, 33, 33, 1);
-}
-
-#workspaces button {
-    padding:    0 4px;
-    color:      rgba(172, 172, 172, 1);
-    outline-style: solid;
-    outline: 5px white;
-}
-
-#workspaces button.visible {
-    color:      rgba(219, 219, 219, 1);
-    outline-style: solid;
-    outline: 5px white;
-}
-
-#workspaces button.focused {
-    color: rgba(255, 255, 255, 1);
-}
-
-#workspaces button.urgent {
-    color:      rgba(238, 46, 36, 1);
-}
-
-#mode, #battery, #cpu, #memory, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail {
-    margin:     0px 6px 0px 10px;
-    min-width:  10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 #clock {
-    margin:     5px 5px 0px 5px;
-    border-color: rgba(33, 33, 33, 1);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background: rgba(33, 33, 33, 1);
+    border-color: @overlay1;
+    background-color: @overlay1;
+}
+ 
+#custom-flameshot {
+    border-color: @maroon;
+    background-color: @maroon;
+}
+
+#custom-flameshot:hover {
+    border-color: @red;
+    background-color: @red;
+}
+
+#battery {
+    border-color: @green;
+    background-color: @green;
+}
+
+#pulseaudio {
+    border-color: @sky;
+    background-color: @sky;
 }
 
 #network {
-    margin:     5px 5px 0px 5px;
-    border-color: rgba(33, 33, 33, 1);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background: rgba(33, 33, 33, 1);
+    border-color: @blue;
+    background-color: @blue;
 }
 
-#custom-flameshot, #pulseaudio, #battery {
-    margin:     5px 0px 0px 5px;
-    border-color: rgba(33, 33, 33, 1);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
+#tray {
+    border-color: @overlay2;
+    background-color: @overlay2;
+
     padding-left: 5px;
     padding-right: 5px;
-    background: rgba(33, 33, 33, 1);
 }

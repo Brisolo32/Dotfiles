@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 exec --no-startup-id autotiling
-exec /home/brisolo/.config/sway/startup.sh
+exec /home/brisolo/Dotfiles/config/sway/startup.sh 
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -251,5 +251,7 @@ client.unfocused        #2C2C2C #ffffff #ffffff #ffffff #2C2C2C
 client.urgent           #9E0202 #ffffff #ffffff #9E0202 #B30000
 for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
 for_window [app_id="pavucontrol"] floating enable, fullscreen disable, move absolute position 450 200,
+
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 include /etc/sway/config.d/*

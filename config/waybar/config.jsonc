@@ -1,10 +1,10 @@
 {
-    "layer": "bottom",
+    "layer": "top",
     "position": "top",
     "height": 8,
 
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
+    "modules-left": ["clock"],
+    "modules-center": [],
     "modules-right": ["custom/flameshot", "battery", "pulseaudio", "network"],
     "sway/window": {
 	   "max-length": "80",
@@ -13,7 +13,7 @@
     },
     "sway/workspaces": {
         "disable-scroll": true,
-        "all-outputs": false,
+        "all-outputs": false
     },
     "clock": {
         "format": "{:%d-%m-%Y %I:%M}",
@@ -21,7 +21,6 @@
     },
     "battery": {
         "format": "{icon} {capacity}%",
-        "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", ""],
         "format-charging": "{icon} {capacity}%",
         "interval": 30,
@@ -48,14 +47,15 @@
         "format-icons": {
             "default": ["", "", ""]
         },
-    "on-click": "pavucontrol"
+    	"on-click": "pavucontrol",
+	"tooltip": false
     },
     "custom/flameshot": {
         "format": "{icon}",
         "format-icons": {
             "default": [""]
         },
-        "on-click": "/home/brisolo/startup.sh",
+        "on-click": "sleep 0.1 && grim -g $(slurp -b24273aba -c181926) - | wl-copy",
         "tooltip": false
     },
     "custom/spotify": {

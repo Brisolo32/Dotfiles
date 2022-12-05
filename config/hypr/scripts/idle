@@ -1,0 +1,3 @@
+swayidle -w \
+	timeout 600 "exec ~/.config/hypr/scripts/execLock" \
+	timeout 590 "hyprctl dispatch dpms off HDMI-A-1 && hyprctl dispatch dpms off eDP-1" resume "hyprctl dispatch dpms on HDMI-A-1 && hyprctl dispatch dpms on eDP-1"
