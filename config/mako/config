@@ -1,0 +1,23 @@
+# Text config
+font=JetBrains Mono 10
+text-color=#cad3f5
+
+# Border config
+border-radius=10
+border-color=#7dc4e4
+
+# Padding/Margin
+padding=13,13,13,13
+
+# Other
+background-color=#24273a
+icons=0
+anchor=top-left
+max-visible=1
+default-timeout=2500
+
+[urgency=low]
+border-color=#a6da95
+
+[urgency=high]
+border-color=#ed9786

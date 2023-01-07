@@ -1,7 +1,7 @@
 # Get editor completions based on the config schema
-# "$schema" = '~/.config/config-schema.json'
+"$schema" = '~/.config/config-schema.json'
 
-format = " $directory[❯](bold green) "
+format = " [ $directory ](blue)[❯](bold green) "
 
 # Inserts a blank line between shell prompts
 add_newline = false
@@ -9,3 +9,7 @@ add_newline = false
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+[directory]
+format = "$path"
+truncation_length = 100

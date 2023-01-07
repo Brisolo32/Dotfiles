@@ -112,8 +112,6 @@ alias pman="sudo aura -S"
 alias yeet="sudo aura -R"
 alias deletus="sudo aura -Rcs"
 source /usr/share/nvm/init-nvm.sh
-
-export GCM_CREDENTIAL_STORE='secretservice'
 export PATH="$PATH:/home/$USER/.dotnet/"
 
 # bun completions
@@ -123,3 +121,12 @@ export PATH="$PATH:/home/$USER/.dotnet/"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:/root/.local/bin:/opt/v/vlib:$PATH"
 export PATH=$PATH:/home/brisolo/.spicetify
+export GCM_CREDENTIAL_STORE='plaintext'
+
+# pnpm
+export PNPM_HOME="/home/brisolo/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+alias vim="lvim"
+alias nvim="lvim"

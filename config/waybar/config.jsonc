@@ -2,22 +2,15 @@
     "layer": "top",
     "position": "top",
     "height": 8,
-
     "modules-left": ["clock"],
-    "modules-center": [],
+    "modules-center": ["custom/previousmusic", "custom/spotify", "custom/nextmusic"],
     "modules-right": ["custom/flameshot", "battery", "pulseaudio", "network"],
-    "sway/window": {
-	   "max-length": "80",
-	   "tooltip": false,
-	   "format": "{}"
-    },
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": false
-    },
     "clock": {
-        "format": "{:%d-%m-%Y %I:%M}",
+        "format": " {:%d-%m-%Y %I:%M}",
         "tooltip": false
+    },
+    "hyprland/window": {
+    	"format": "{}"
     },
     "battery": {
         "format": "{icon} {capacity}%",
@@ -31,13 +24,13 @@
         "tooltip": false
     },
     "network": {
-        "format": "{icon}",
+        "format": "{icon} {essid}",
         "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": [" Weak signal", " Fair signal" ," Strong signal"],
-            "ethernet": [" Ethernet"],
-            "disconnected": [" No Connection"]
+            "wifi": [""],
+            "ethernet": [""],
+            "disconnected": [""]
         },
         "on-click": "alacritty -e nmcli",
     "tooltip": false
@@ -55,40 +48,19 @@
         "format-icons": {
             "default": [""]
         },
-        "on-click": "sleep 0.1 && grim -g $(slurp -b24273aba -c181926) - | wl-copy",
+        "on-click": "sleep 0.1 && grim -g \"$(slurp -b24273aba -c181926)\" - | wl-copy",
         "tooltip": false
     },
     "custom/spotify": {
-        "interval": 1,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify.sh",
-        "exec-if": "pgrep spotify",
-        "escape": true
-    },
-    "custom/storage": {
-        "format": "{} ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
-    },
-    "backlight": {
-        "format": "{icon}",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": ["", ""],
-        "on-scroll-down": "light -A 1",
-        "on-scroll-up": "light -U 1"
-    },
-    "custom/weather": {
         "format": "{}",
-        "format-alt": "{alt}: {}",
-        "format-alt-click": "click-right",
-        "interval": 1800,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/weather.sh",
-        "exec-if": "ping wttr.in -c1"
+        "tooltip": false,
+        "interval": 1,
+        "exec": "playerctl --player=spotify metadata -f \"{{artist}} - {{title}}\"",
+        "exec-if": "pgrep spotify",
+        "escape": true,
+        "on-click": "playerctl --player=spotify play-pause",
+        "on-scroll-up": "playerctl --player=spotify volume 0.05+",
+        "on-scroll-down": "playerctl --player=spotify volume 0.05-"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -97,21 +69,6 @@
             "deactivated": ""
         },
         "tooltip": false
-    },
-    "custom/mail": {
-        "format": "",
-        "format-alt": "{alt} ",
-        "format-alt-click": "click-right",
-        "interval": 60,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/mail.py",
-        "tooltip": false
-    },
-    "custom/test": {
-        "format": "{}",
-        "exec": "/tmp/test blub",
-        "param": "blah",
-        "interval": 5
     },
     "tray": {
         "icon-size": 18

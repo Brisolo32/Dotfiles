@@ -15,50 +15,38 @@ window#waybar {
     background-color: @base;
 }
 
-#clock, #network, #custom-flameshot, #pulseaudio, #battery, #tray {
-    margin: 5px 5px 5px 5px;
-    /* background-color: @crust; */
+#clock, 
+#network, 
+#custom-flameshot, 
+#pulseaudio, 
+#battery, 
+#tray,
+#window,
+#custom-spotify,
+#custom-nextmusic,
+#custom-previousmusic {
     border-style: solid;
-    /* border-color: @crust; */
+    color: @text;
     border-radius: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 5px 10px 3px 10px;
 }
 
-#clock {
-    border-color: @overlay1;
-    background-color: @overlay1;
+* {
+  color: @text;
 }
- 
+
 #custom-flameshot {
-    border-color: @maroon;
-    background-color: @maroon;
-}
-
-#custom-flameshot:hover {
-    border-color: @red;
-    background-color: @red;
+  color: @red;
 }
 
 #battery {
-    border-color: @green;
-    background-color: @green;
+  color: @green;
 }
 
 #pulseaudio {
-    border-color: @sky;
-    background-color: @sky;
+  color: @blue;
 }
 
 #network {
-    border-color: @blue;
-    background-color: @blue;
-}
-
-#tray {
-    border-color: @overlay2;
-    background-color: @overlay2;
-
-    padding-left: 5px;
-    padding-right: 5px;
+  color: @sapphire;
 }

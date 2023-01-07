@@ -1,0 +1,18 @@
+if [ $1 = skip ] 
+then
+  playerctl next
+fi
+
+if [ $1 = back ]
+then
+  playerctl previous
+fi
+
+player_status=$(playerctl status 2> /dev/null)
+
+if [ "$player_status" = "Playing" ]
+  NAME=$(playerctl metadata xesam:title)
+  ARTIST=$(playerctl metadata xesam:artist)
+
+  echo "$NAME - $ARTIST" 
+fi

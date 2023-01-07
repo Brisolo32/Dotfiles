@@ -1,8 +1,7 @@
 @import "macchiato.css";
 
 window {
-   border-radius: 10px;
-   box-shadow: 0px 0px 0px 17px rgba(0, 0, 0, 0, 88);
+  border-radius: 10px;
 }
 
 #outer-box {
@@ -12,9 +11,8 @@ window {
   margin-right: 0px;
 
   border-style: solid;
-  border-color: #24273a;
+  border-color: #1e2030;
   border-radius: 10px;
   border-width: 10px;
+  background-color: #1e2030;
 }
-
-
