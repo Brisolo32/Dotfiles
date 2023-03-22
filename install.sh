@@ -6,7 +6,7 @@ install() {
     ln -sf config/fish $HOME/.config/fish
     ln -sf config/bashtop $HOME/.config/bashtop
     ln -sf config/gtk-4.0 $HOME/.config/gtk-4.0
-    ln -sf config/starship.toml $HOME/starship.toml
+    ln -sf config/starship.toml $HOME/.config/starship.toml
 
     echo "Linking other stuff"
     ln -sf config/spicetify $HOME/.spicetify
