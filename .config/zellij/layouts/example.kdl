@@ -1,0 +1,7 @@
+layout {
+  // Borderless panels FTW!!!!
+  pane borderless=true
+  pane size=1 borderless=true {
+    plugin location="file:/home/brisolo32/.local/share/zellij/plugins/bare-bar.wasm"
+  }
+}

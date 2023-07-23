@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Kills and starts XDG-Desktop-Portal (wlr and hyprland)
+sleep 1
+killall -e xdg-desktop-portal-hyprland
+killall -e xdg-desktop-portal-wlr
+killall xdg-desktop-portal
+/usr/libexec/xdg-desktop-portal-hyprland &
+sleep 2
+/usr/libexec/xdg-desktop-portal &
+
+export GCM_CREDENTIAL_STORE=secretservice
+export QT_QPA_PLATFORMTHEME=qt6ct
+
+export SDL_VIDEODRIVER=wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORM=wayland
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_DESKTOP=Hyprland
+export MOZ_ENABLE_WAYLAND=1
