@@ -1,1 +1,1 @@
-swaybg -i $(find ~/Dotfiles/Wallpapers/Catppuccin/ -type f | shuf -n1) -m fill &
+swaybg -i $(find ~/Dotfiles/Wallpapers/ -type f | shuf -n1) -m fill &
